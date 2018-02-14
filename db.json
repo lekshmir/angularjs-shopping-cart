@@ -1,0 +1,14 @@
+{
+    "products": [
+      { 
+        "id": 1, 
+        "title": "IPhone6", 
+        "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5859/5859425cv11d.jpg" 
+      },
+      { 
+        "id": 2, 
+        "title": "IPhoneX", 
+        "url": "https://cdn2.gsmarena.com/vv/bigpic/apple-iphone-x.jpg" 
+      }
+    ]
+}

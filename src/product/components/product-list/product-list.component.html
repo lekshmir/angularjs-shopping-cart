@@ -1,0 +1,20 @@
+<div id="prodlist">
+    <h2>Product Catalog</h2>
+    <div ng-controller="ProductListCtrl">
+            <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Product</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in $ctrl.products">
+                            <td>{{item.id}}</td>
+                            <td><a href="{{item.url}}">{{item.title}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+    <!-- {{$ctrl.products}} -->
+</div>
