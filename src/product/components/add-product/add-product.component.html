@@ -1,5 +1,41 @@
-<div >
 
-            <h2>Add Products</h2>
-        
+<div id="prodlist">
+        <h2>Add Product</h2>
+        <br/>
+        <br/>
+<form name="addProductForm" ng-submit="$ctrl.onFormSubmit($event, addProductForm)" novalidate>
+    <div>
+        <label class="aplabel" for="title">Title</label>
+        <input 
+            ng-model="$ctrl.newProduct.title" 
+            required
+            minlength="3"
+            type="text" name="title">
+            <br/>
+        <span ng-if="addProductForm.title.$error.required">
+              This field is required!
+        </span>
+    </div>
+    <br/>
+    <div>
+            <label class="aplabel" for="company">Company</label>
+            <input ng-model="$ctrl.newProduct.company" type="text" name="company">
+    </div>
+    <br/>
+    <div>
+            <label class="aplabel" for="price">Price</label>
+            <input ng-model="$ctrl.newProduct.price" type="number" name="price">
+    </div>
+    <br/>
+    <div>
+            <label class="aplabel" for="imgUrl">Image url</label>
+            <input ng-model="$ctrl.newProduct.imgUrl" type="text" name="imgUrl">
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="Add Product">
+        <input type="reset" value="Reset">
+    </div>
+
+</form>
 </div>

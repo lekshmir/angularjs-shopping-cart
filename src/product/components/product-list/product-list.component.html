@@ -1,20 +1,17 @@
 <div id="prodlist">
     <h2>Product Catalog</h2>
     <div ng-controller="ProductListCtrl">
-            <table>
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Product</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="item in $ctrl.products">
-                            <td>{{item.id}}</td>
-                            <td><a href="{{item.url}}">{{item.title}}</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div ng-repeat="prod in $ctrl.products" class="product">
+                    <h3 ng-bind="prod.title"></h3>
+                    <img width="100" height="100" ng-src="{{prod.imgUrl}}" alt="">
+                    <div>
+                        <span class="price" ng-bind="prod.price | currency: USD"></span>        
+                    </div>
+                    <div>
+                        <a ui-sref="showProdInfo({productId: prod.id})">View Details</a>
+                            <button>Add to Cart</button>
+                    </div>
+                </div>
     </div>
     <!-- {{$ctrl.products}} -->
 </div>

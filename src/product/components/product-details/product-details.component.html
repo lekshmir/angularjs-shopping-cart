@@ -1,1 +1,12 @@
-Product Details Page
+<h2>Product Details Page</h2>
+
+<div  class="product">
+        <h3 ng-bind="$ctrl.product.title"></h3>
+        <img width="100" height="100" ng-src="{{$ctrl.product.imgUrl}}" alt="">
+        <div>
+            <span class="price" ng-bind="$ctrl.product.price | currency: USD"></span>        
+        </div>
+        <div>
+                <button>Add to Cart</button>
+        </div>
+    </div>

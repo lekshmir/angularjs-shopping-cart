@@ -4,10 +4,10 @@ angular.module('shoppingCart.product')
         this.getProducts = function(){
             return $http.get(AppConstant.urls.product);
         };
-        this.addProduct = function(){
-
+        this.addProduct = function(productDetails){
+            return $http.post(AppConstant.urls.product, productDetails);
         };
-        this.getProductDetails = function(){
-
+        this.getProductDetails = function(productID){
+            return $http.get(AppConstant.urls.product + '/' + productID);
         };
     }])
