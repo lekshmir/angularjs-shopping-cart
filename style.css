@@ -51,6 +51,7 @@
     margin: 10px;
     padding-right: 10px; 
 }
-input.ng-invalid .ng-dirty{
-    border-color: red;
+
+input.ng-invalid.ng-dirty{
+    border: 1px solid red;
 }

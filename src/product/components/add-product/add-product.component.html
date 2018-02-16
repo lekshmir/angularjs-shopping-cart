@@ -9,9 +9,18 @@
         <input 
             ng-model="$ctrl.newProduct.title" 
             required
+            prod-title
+            prod-availability
             minlength="3"
+            ng-model-options="{updateOn: 'default blur', debounce: {default:500, blur: 0}}"
             type="text" name="title">
             <br/>
+        <span ng-if="addProductForm.title.$error.prodTitle">
+            Should not start with a
+        </span>    
+        <span ng-if="addProductForm.title.$error.prodAvailability">
+            Item already Exist
+        </span>
         <span ng-if="addProductForm.title.$error.required">
               This field is required!
         </span>
